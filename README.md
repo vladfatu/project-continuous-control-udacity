@@ -6,7 +6,7 @@ Solution for the second project in Udacity's [Deep Reinforcement Learning Nanode
 
 ### Introduction
 
-In this project I trained an agent to move double-jointed arms to target locations. 
+In this project I trained an agent to move a double-jointed arm to a target location. 
 
 ![Trained Agent][reacher] 
 
