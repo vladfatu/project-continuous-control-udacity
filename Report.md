@@ -9,7 +9,7 @@ The pendulum Gym environment has a single agent while the Reacher environment I 
 \
 I changed it so that at each time step, all experiences from all agents are added to the replay buffer and the local Actor and Critic networks are updated once using a sample from the replay buffer.
 \
-Another change I needed to make was to the noise. In the Udacity agent, Ornsetein-Uhlenbeck noise is added to the actor policy as this helps with exploration in physical environments that have momentum. No complicated changes were required, I just needed to make sure noise was generated separately for each agent.
+Another change I needed to make was to the noise. In the Udacity agent, Ornsetein-Uhlenbeck noise is added to action space as this helps with exploration in physical environments that have momentum. No complicated changes were required, I just needed to make sure noise was generated separately for each agent.
 
 - #### Network architecture
 
@@ -40,3 +40,9 @@ I was able to solve the environment in 43 episodes.
 <img width="540" alt="Training Graph" src="https://github.com/vladfatu/project-continuous-control-udacity/assets/1000350/5c0f8db0-f6c1-4c3d-b7ce-32866787f39d">
 
 ### Future Improvements
+
+- #### Add noise to the observation space instead of the action space.
+The current implementation adds Ornsetein-Uhlenbeck noise to actions predicted by the network(the output). It is possible to get better results if noise was added to the observation(the input of the network).
+
+- #### Prioritized experience replay!
+Another improvement would be to choose better experiences from the replay buffer. This should result in faster training as we will more often choose important experiences to learn from. The full description for this method can be found in [this research paper](https://arxiv.org/abs/1511.05952).
