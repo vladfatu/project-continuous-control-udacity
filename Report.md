@@ -14,10 +14,10 @@ Another change I needed to make was to the noise. In the Udacity agent, Ornsetei
 - #### Network architecture
 
 DDPG contains 2 networks, an Actor and a Critic.
-- actor:
-The input to the actor network has 33 dimensions and contains the position, rotation, velocity, and angular velocities of the arm. This is followed by 2 hidden Linear Layers of size 128 activated by a RELU activation function. The output has a size of 4 and is activated by a tanh activation function.
-- critic:
-The input to the critic network has the same 33 dimensions as the Actor network. This is followed by a hidden Linear Layer of size 128 activated by a RELU activation function. Next, there is another hidden Linear Layer of size 132(128 from the previous layer + 4, the action provided by the Actor network). This layer is also activated by a relu activation function. Finally, the output has a size of 1.
+- Actor:
+The input to the Actor network has 33 dimensions and contains the position, rotation, velocity, and angular velocities of the arm. This is followed by 2 hidden Linear Layers of size 128 activated by a RELU activation function. The output has a size of 4 and is activated by a tanh activation function.
+- Critic:
+The input to the Critic network has the same 33 dimensions as the Actor network. This is followed by a hidden Linear Layer of size 128 activated by a RELU activation function. Next, there is another hidden Linear Layer of size 132(128 from the previous layer + 4, the action provided by the Actor network). This layer is also activated by a relu activation function. Finally, the output has a size of 1.
 
 - #### Hyperparameters
 
