@@ -5,7 +5,7 @@
 To solve this environment, I used a DDPG agent. I started from Udacity's [agent](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-pendulum/ddpg_agent.py) for the pendulum Gym environment based on this [paper](https://arxiv.org/pdf/1509.02971.pdf) by Google DeepMind. 
 \
 \
-The pendulum Gym environment has a single agent while the Reacher environment I am trying to solve has 20 identical agents running at the same time. So I had to adjust the code from Udacity to support multiple agents. 
+The pendulum Gym environment has a single agent while the Reacher environment I was trying to solve has 20 identical agents running at the same time. So I had to adjust the code from Udacity to support multiple agents. 
 \
 I changed it so that at each time step, all experiences from all agents are added to the replay buffer and the local Actor and Critic networks are updated once using a sample from the replay buffer.
 \
